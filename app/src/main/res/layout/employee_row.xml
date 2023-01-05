@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="employee"
+            type="com.example.firebaseproject.models.Employee" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/empRow"
+        android:paddingStart="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="?listPreferredItemHeight"
+            android:text="@{employee.name}"
+            android:padding="10dp"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+</layout>

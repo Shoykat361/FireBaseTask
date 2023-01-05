@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/employeListFragment">
+
+    <fragment
+        android:id="@+id/employeListFragment"
+        android:name="com.example.firebaseproject.EmployeListFragment"
+        android:label="Employe List"
+        tools:layout="@layout/fragment_employe_list" >
+        <action
+            android:id="@+id/action_employeListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_employeListFragment_to_addEmployeeFragment"
+            app:destination="@id/addEmployeeFragment" />
+        <action
+            android:id="@+id/action_employeListFragment_to_employeeDetaisFragment"
+            app:destination="@id/employeeDetaisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.firebaseproject.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.example.firebaseproject.AddEmployeeFragment"
+        android:label="fragment_add_employee"
+        tools:layout="@layout/fragment_add_employee" />
+    <fragment
+        android:id="@+id/employeeDetaisFragment"
+        android:name="com.example.firebaseproject.EmployeeDetaisFragment"
+        android:label="fragment_employee_detais"
+        tools:layout="@layout/fragment_employee_detais" />
+</navigation>
